@@ -29,7 +29,7 @@ public class MyVaadinUI extends UI
         Button button = new Button("Click Me");
         button.addClickListener(new Button.ClickListener() {
             public void buttonClick(ClickEvent event) {
-                HandlebarsComponent hc = new HandlebarsComponent("intro", "{title: 'Vaadin Handlebars', body: 'They are working together!'}");
+                HandlebarsComponent hc = new HandlebarsComponent("intro", "{title: 'Vaadin Handlebars', body: 'They are working together!', colors: [{color: 'red'},{color: 'green'},{color: 'blue'},{color: 'purple'}]}");
                 layout.addComponent(hc);
             }
         });
