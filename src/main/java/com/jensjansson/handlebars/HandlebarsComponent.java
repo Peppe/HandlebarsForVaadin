@@ -26,8 +26,10 @@ public class HandlebarsComponent extends AbstractJavaScriptComponent {
 	private String readFile(String templateName) {
 		String template = "ERROR";
 		try {
-			InputStream file = HandlebarsComponent.class
-					.getResourceAsStream(templateName + ".template");
+			ClassLoader classloader = Thread.currentThread().getContextClassLoader();
+			InputStream file = classloader.getResourceAsStream("templates/" + templateName + ".template");
+//			InputStream file = getClass().getClassLoader()
+//					.getResourceAsStream(templateName + ".template");
 			InputStreamReader is = new InputStreamReader(file);
 			StringBuilder sb = new StringBuilder();
 			BufferedReader br = new BufferedReader(is);
