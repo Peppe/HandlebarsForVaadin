@@ -1,0 +1,10 @@
+<div class="entry">
+  <h1>{{title}}</h1>
+  <div class="body">
+    <p>{{body}}</p>
+    <p><b>Here are some colors:</b><br />
+    {{#each colors}}
+     <div><span style="width:10px;height:10px;background-color:{{color}};margin-right:10px;display:inline-block;"></span>{{color}}</div>
+    {{/each}}
+  </div>
+</div>
